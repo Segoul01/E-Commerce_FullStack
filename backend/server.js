@@ -8,7 +8,7 @@ app.use(express.json()); // allows us to accept JSON data in the req.body
 
 app.use("/api/products", productRoutes);
 
-app.listen(8000, () => {
-    console.log(`Server started at port: 8000`);
+app.listen(process.env.PORT, () => {
+    console.log(`Server started at port: ${process.env.PORT}`);
     connectDB();
 });
